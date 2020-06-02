@@ -1,0 +1,36 @@
+﻿@using mvcbir.Models.Entity
+@model List<ÜCRET>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>ÜCRET ID</th>*@
+        <th>MÜŞTERİ ADI VE SOYADI</th>
+        <th>ARAÇ GİRİŞ TARİHİ</th>
+        <th>ARAÇ ÇIKIŞ TARİHİ</th>
+        <th>SAAT </th>
+        <th>TUTAR</th>
+        
+
+    </tr>
+    <tbody>
+        @foreach (var ücrt in Model)
+        {
+            <tr>
+                @*<td>@ücrt.ücretid</td>*@
+                <td>@ücrt.müsterid</td>
+                <td>@ücrt.giristarihi</td>
+                <td>@ücrt.cikistarihi</td>
+                <td>@ücrt.saat</td>
+                <td>@ücrt.tutar</td>
+                
+            </tr>
+        }
+    </tbody>
+
+
+</table>
+

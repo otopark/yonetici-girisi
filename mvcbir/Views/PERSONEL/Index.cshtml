@@ -1,0 +1,40 @@
+﻿@using mvcbir.Models.Entity
+@model List<PERSONEL>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>PERSONEL ID</th>*@
+        <th>PERSONEL AD</th>
+        <th>PERSONEL SOYAD</th>
+        <th>PERSONEL TC NO </th>
+        <th>PERSONEL TELEFON NUMARASI</th>
+        @*<th>PERSONEL ŞİFRESİ</th>*@
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+
+    </tr>
+    <tbody>
+        @foreach (var per in Model)
+        {
+            <tr>
+                @*<td>@per.personelid</td>*@
+                <td>@per.personelad</td>
+                <td>@per.personelsoyad</td>
+                <td>@per.personeltcno</td>
+                <td>@per.personeltel</td>
+                @*<td>@per.personelsifre</td>*@
+                <td><a href="/PERSONEL/SİL/@per.personelid" class="btn btn-danger">SİL</a></td>
+                <td><a href="/PERSONEL/PERSONELGETİR/@per.personelid" class="btn btn-success ">GÜNCELLE</a></td>
+
+            </tr>
+            }
+    </tbody>
+
+
+</table>
+<a href="/PERSONEL/YENİPERSONEL/" class="btn btn-primary">YENİ PERSONEL EKLE</a>

@@ -1,0 +1,39 @@
+﻿@using mvcbir.Models.Entity
+@model List<ARACGİRCIK>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>OTOPARK ID</th>*@
+        <th>PARK YERİ NUMARASI </th>
+        <th>MÜŞTERİ AD</th>
+        <th>MÜŞTERİ SOYAD</th>
+        <th>MÜŞTERİ PLAKA</th>
+        <th>ARAÇ GİRİŞ TARİHİ</th>
+        <th>ARAÇ ÇIKIŞ TARİHİ</th>
+        <th>ARAÇ GİRİŞ SAATİ</th>
+        <th>ARAÇ ÇIKIŞ SAATİ</th>
+
+    </tr>
+    <tbody>
+        @foreach(var aracgir in Model)
+        {
+            <tr>
+                @*<td>@aracgir.otoid</td>*@
+                <td>@aracgir.otoyerid</td>
+                <td>@aracgir.otomüsteriad</td>
+                <td>@aracgir.otomüsterisoyad</td>
+                <td>@aracgir.otomüsteriplaka</td>
+                <td>@aracgir.aracgiristarihi</td>
+                <td>@aracgir.araccıkıstarihi</td>
+                <td>@aracgir.aracgirissaat</td>
+                <td>@aracgir.araccıkıssaat</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

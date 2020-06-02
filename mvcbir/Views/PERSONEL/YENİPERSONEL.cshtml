@@ -1,0 +1,37 @@
+﻿@model mvcbir.Models.Entity.PERSONEL
+@{
+    ViewBag.Title = "YENİPERSONEL";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group " method="post">
+    <div>
+        <label>PERSONEL AD</label>
+        <input type="text" class="form-control" name="PERSONELAD" required="" />
+    </div>
+    <div>
+        <label>PERSONEL SOYAD</label>
+        <input type="text" class="form-control" name="PERSONELSOYAD" required="" />
+    </div>
+    <div>
+        <label>PERSONEL TC NO</label>
+        <input type="text" class="form-control" name="PERSONELTCNO" required=""/>
+    </div>
+    <div>
+        <label>PERSONEL TELEFON NO</label>
+        <input type="text" class="form-control" name="PERSONELTELEFONNO" required="" />
+    </div>
+    
+
+    <div style="margin-top:15px">
+        <button class="btn btn-info " id="btn1">PERSONEL EKLE </button>
+    </div>
+    <script>
+        $('#btn1').click(function () {
+            alert('PERSONEL EKLEME İŞLEMİ YAPILDI...');
+        }
+        );
+    </script>
+</form>
+
+

@@ -1,0 +1,40 @@
+﻿@using mvcbir.Models.Entity
+@model List<MÜSTERI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        @*<th>MÜŞTERİ NUMARASI</th>*@
+        <th>MÜŞTERİ AD</th>
+        <th>MÜŞTERİ SOYAD</th>
+        <th>MÜŞTERİ TC NO </th>
+        <th>MÜŞTERİ TELEFON NUMARASI</th>
+        <th>MÜŞTERİ ARAÇ PLAKASI</th>
+        @*<th>SİL</th>
+        <th>GÜNCELLE</th>*@
+        
+
+    </tr>
+    <tbody>
+        @foreach (var müstr in Model)
+        {
+        <tr>
+            @*<td>@müstr.müsteriid</td>*@
+            <td>@müstr.müsteriad</td>
+            <td>@müstr.müsterisoyad</td>
+            <td>@müstr.müsteritcno</td>
+            <td>@müstr.müsteritel</td>
+            <td>@müstr.müsteriplaka</td>
+            @*<td><a href="/MÜSTERİ/SİL/@müstr.müsteriid" class="btn btn-danger">SİL</a></td>
+            <td><a href="/MÜSTERİ/GÜNCELLE/@müstr.müsteriid" class="btn btn-success">GÜNCELLE</a></td>*@
+        </tr>
+        }
+    </tbody>
+
+
+</table>
+
+

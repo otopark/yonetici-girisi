@@ -1,0 +1,31 @@
+﻿@using mvcbir.Models.Entity
+@model List<PARKBILGISI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>PARK YERİ NUMARASI</th>
+        <th>PARK BİLGİSİ DURUMU</th>
+
+
+    </tr>
+    <tbody>
+        @foreach(var parkbil in Model)
+        {
+            <tr>
+                <td>@parkbil.parkID</td>
+                <td>@parkbil.parkbilgisi1</td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+</table>

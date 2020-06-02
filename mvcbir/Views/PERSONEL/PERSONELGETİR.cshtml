@@ -1,0 +1,39 @@
+﻿@model mvcbir.Models.Entity.PERSONEL
+@{
+    ViewBag.Title = "PERSONELGETİR";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("GÜNCELLE", "PERSONEL", FormMethod.Post))
+{
+<div class="form-group ">
+    PERSONEL NUMARASI
+    @Html.TextBoxFor(p => p.personelid, new { @class = "form-control" })
+    <br />
+    PERSONEL ADI
+
+    @Html.TextBoxFor(p => p.personelad, new { @class = "form-control" })
+    <br />
+    PERSONEL SOYADI
+
+    @Html.TextBoxFor(p => p.personelsoyad, new { @class = "form-control" })
+    <br />
+    PERSONEL TC NO
+
+    @Html.TextBoxFor(p => p.personeltcno, new { @class = "form-control" })
+    <br />
+    PERSONEL TELEFON
+
+    @Html.TextBoxFor(p => p.personeltel, new { @class = "form-control" })
+    <br />
+    PERSONEL ŞİFRE
+
+    @Html.TextBoxFor(p => p.personelsifre, new { @class = "form-control" })
+
+</div>
+    <div>
+        <button class="btn btn-warning">PERSONEL GÜNCELLE</button>
+    </div>
+
+}
+
